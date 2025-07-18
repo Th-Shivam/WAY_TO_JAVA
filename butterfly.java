@@ -7,20 +7,64 @@ public class butterfly {
         String star = "*";
         int n = sc.nextInt();
 
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print(star + " ");
+        for (int i = 1; i <= n; i++) 
+        {
+            for (int j = 1; j <= i; j++) 
+            {
+                System.out.print(star);
             }
-            System.out.println();
-        }
+     
 
-        for (int i = n; i <= 1; i--) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print(star + " ");
+
+            int space = 2 * (n - i);
+
+            for (int j = 1; j <= space; j++) 
+            {
+                System.out.print(" ");      
             }
-            System.out.println();
-        }
 
-    }
+            for (int j = 1; j <= i; j++) 
+            {
+                System.out.print(star);
+            }
+
+             System.out.println();
+
+
+
+
+    } 
+
+            for (int i = n; i >= 1; i--) 
+        {
+            for (int j = 1; j <= i; j++) 
+            {
+                System.out.print(star);
+            }
+     
+
+
+            int space = 2 * (n - i);
+
+            for (int j = 1; j <= space; j++) 
+            {
+                System.out.print(" ");      
+            }
+
+            for (int j = 1; j <= i; j++) 
+            {
+                System.out.print(star);
+            }
+
+             System.out.println();
+
+
+
+
+    } 
+    
+    
+    sc.close();
+} 
+
 }
-
