@@ -1,4 +1,3 @@
-import java.util.* ;
 public class Substring {
     public static void main(String args[]){
 
@@ -30,10 +29,6 @@ public class Substring {
         sb.setCharAt(2 , 'l');
 
         System.out.println("After setting the char 'm'  to 'l' again : " + sb );
-
-
-
-
 
     }
 }
