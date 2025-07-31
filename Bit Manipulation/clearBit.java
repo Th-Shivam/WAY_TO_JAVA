@@ -18,5 +18,7 @@ public class clearBit {
         int result = num & nbitMask;
 
         System.out.println("Number after clearing bit at position " + pos + " is: " + result);
+
+        sc.close();
     }
 }
