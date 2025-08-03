@@ -1,5 +1,3 @@
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
 import java.util.* ;
 class SelectionSort {
     public static void main(String[] args) {
@@ -12,14 +10,17 @@ class SelectionSort {
             arr[i] = sc.nextInt();
         }
         
-        for(int i = 0 ; i<n-1 ; i++){
-            for (int j=i ; j<n ; j++){
-                if(arr[i] > arr[j]){
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp ;                    
+        for (int i = 0 ; i<arr.length-1 ; i++){
+            int min_idx = i ;
+            for(int j = i+1 ; j<arr.length ; j++){
+                if(arr[min_idx] > arr[j] ){
+                    min_idx = j ;
                 }
             }
+            
+            int temp = arr[i];
+            arr[i] = arr[min_idx];
+            arr[min_idx] = temp ;
         }
         
         System.out.println("Sorted array :");
