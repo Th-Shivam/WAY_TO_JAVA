@@ -1,4 +1,4 @@
-package Recursion;
+
 class SumtillN {
     
         public static void PrintSum(int i , int n , int sum){
