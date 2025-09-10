@@ -1,4 +1,4 @@
-class FindOccurenceString {
+class FindOccurenceStringR {
     public static int first = -1;
     public static int last = -1;
 

@@ -1,4 +1,4 @@
-class Reverse {
+class ReverseR {
     
     public static void PrintRev(String str , int idx){
         if(idx==0){

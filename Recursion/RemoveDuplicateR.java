@@ -1,4 +1,4 @@
-class RemoveDuplicate {
+class RemoveDuplicateR {
 
     public static boolean[] map = new boolean[26];
 

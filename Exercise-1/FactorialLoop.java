@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Factorial {
+public class FactorialLoop {
 
     public static int Fact(int n) {
         int fact = 1;

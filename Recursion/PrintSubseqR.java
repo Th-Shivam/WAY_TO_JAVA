@@ -1,4 +1,4 @@
-class PrintSubseq {
+class PrintSubseqR {
     
     public static void subseq(String str , int idx  , String newStr){
         if(idx == str.length()){
