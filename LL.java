@@ -55,8 +55,6 @@ public class LL {
             }
             newNode.next = temp.next ;
             temp.next = newNode ;
-
-
         }
     }
 
