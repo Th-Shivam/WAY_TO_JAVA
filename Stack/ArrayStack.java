@@ -1,77 +1,67 @@
-package Stack ;// Stack implementation using Array
-class Stack {
-    private int[] arr;   // Array to store stack elements
-    private int top;     // Index of top element
-    private int capacity; // Maximum capacity of stack
+package Stack;
 
-    // Constructor
-    Stack(int size) {
-        arr = new int[size];
-        capacity = size;
-        top = -1;
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
     }
 
-    // Push element onto the stack
-    public void push(int x) {
-        if (isFull()) {
-            System.out.println("Stack Overflow! Cannot push " + x);
-            return;
-        }
-        arr[++top] = x;
-        System.out.println("Pushed " + x);
-    }
-
-    // Pop element from the stack
-    public int pop() {
-        if (isEmpty()) {
-            System.out.println("Stack Underflow! No element to pop");
-            return -1;
-        }
-        return arr[top--];
-    }
-
-    // Peek at the top element
-    public int peek() {
-        if (isEmpty()) {
-            System.out.println("Stack is Empty");
-            return -1;
-        }
-        return arr[top];
-    }
-
-    // Check if stack is empty
-    public boolean isEmpty() {
-        return top == -1;
-    }
-
-    // Check if stack is full
-    public boolean isFull() {
-        return top == capacity - 1;
-    }
-
-    // Get current size of stack
-    public int size() {
-        return top + 1;
-    }
 }
 
-// Main class to test the Stack
 public class ArrayStack {
+    public static Node head;
+
+    public static Boolean isEmpty() {
+        return head == null;
+    }
+
+    public  void push(int data) {
+        Node newNode = new Node(data);
+        if (isEmpty()) {
+            head = newNode;
+            return;
+        }
+        newNode.next = head;
+        head = newNode;
+    }
+
+    public  int pop() {
+        if (isEmpty()) {
+            return -1;
+        }
+        int top = head.data;
+        head = head.next;
+        return top;
+    }
+
+    public  int peek() {
+        if (isEmpty()) {
+            return -1;
+        }
+        return head.data;
+    }
+
+    public void  display() {
+        Node curr = head;
+        while (curr != null) {
+            System.out.print(curr.data + " ");
+            curr = curr.next;
+        }
+        System.out.println();
+    }
+
+     
+
     public static void main(String[] args) {
-        Stack stack = new Stack(5);
+        ArrayStack stack = new ArrayStack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.pop();
+        stack.display(); // Output: 3 2 1
 
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
-
-        System.out.println("Top element: " + stack.peek());
-        System.out.println("Stack size: " + stack.size());
-
-        System.out.println("Popped element: " + stack.pop());
-        System.out.println("Top element now: " + stack.peek());
-
-        stack.push(40);
-        stack.push(50);
-        stack.push(60);  // This will give overflow
     }
 }
