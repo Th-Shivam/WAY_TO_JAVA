@@ -22,7 +22,8 @@ class ArrayQueue {
             System.out.println("Queue is full");
             return false;
         }
-        if (front == -1) front = 0;
+        if (front == -1) 
+        front = 0;
         rear++;
         arr[rear] = data;
         return true;
