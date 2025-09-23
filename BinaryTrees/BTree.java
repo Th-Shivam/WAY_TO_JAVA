@@ -1,4 +1,5 @@
 package BinaryTrees;
+import java.util.* ;
 
 class Node{
   int data ;
@@ -48,6 +49,36 @@ class BinaryTree{
     System.out.print(node.data + " ") ;
   }
 
+  public void LevelOrder(Node root ){
+    if(root == null){
+      return ;
+    }
+
+    Queue<Node> queue = new LinkedList<>() ;
+    queue.add(root) ;
+    queue.add(null) ;
+
+    while(!queue.isEmpty()){
+      Node currNode = queue.poll() ;
+      if(currNode == null){
+        System.out.println() ;
+        if(queue.isEmpty()){
+          break ;
+        }else{
+          queue.add(null) ;
+        }
+      }else{
+        System.out.print(currNode.data + " ") ;
+        if(currNode.left != null){
+          queue.add(currNode.left) ;
+        }
+        if(currNode.right != null){
+          queue.add(currNode.right) ;
+        }
+      }
+    }
+  }
+
 }
 
 class BTree{
@@ -67,6 +98,8 @@ class BTree{
     System.out.println();
     System.out.println("Now postOrder traversal") ;
     tree.postOrder(tree.root) ;
+    System.out.println("\nLevel Order traversal is : ") ;
+    tree.LevelOrder(tree.root) ;
 
   }
 }
