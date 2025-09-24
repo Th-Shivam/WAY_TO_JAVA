@@ -1,4 +1,3 @@
-package BinaryTrees;
 import java.util.* ;
 
 class Node{
