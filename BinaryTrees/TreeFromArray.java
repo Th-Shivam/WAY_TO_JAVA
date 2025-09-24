@@ -35,6 +35,14 @@ public class TreeFromArray {
             return countNodes(root.left) + countNodes(root.right) + 1 ;
         }
 
+        public static int sumNodes(Node root){
+            if (root == null){
+                return 0 ;
+            }
+
+            return sumNodes(root.left) + sumNodes(root.right) + root.data ;
+        }
+
         public static void main(String[] args) {
         int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1} ;
 
@@ -42,5 +50,6 @@ public class TreeFromArray {
         Node root = tree.buildTree(nodes);
         System.out.println(root.data);
         System.out.println("No. of nodes : " + countNodes(root));
+        System.out.println("Sum of nodes : " + sumNodes(root));
     }
 }
