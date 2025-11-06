@@ -1,4 +1,3 @@
-package PepCoding;
 import java.util.* ;
 class Inverseofanum {
     public static void main(String[] args) {
