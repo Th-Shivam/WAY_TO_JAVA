@@ -15,5 +15,6 @@ class primeFactors {
                 divisor++ ;
             }
         }
+        sc.close();
     }
 }
