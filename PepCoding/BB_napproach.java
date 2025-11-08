@@ -1,5 +1,3 @@
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
 import java.util.* ;
 class BB_napproach {
     public static void main(String[] args) {
@@ -38,3 +36,16 @@ class BB_napproach {
         sc.close() ;
     }
 }
+
+
+// Most optimized approach
+
+// class Solution {
+//     public int bulbSwitch(int n) {
+//         int count = 0 ;
+//         for (int i = 1; i*i <= n; i++) {
+//             count++ ;
+//         } 
+//         return count ;
+//     }
+// }
