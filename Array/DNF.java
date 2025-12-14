@@ -1,4 +1,4 @@
-public class DNFSort {
+public class DNF {
     public static void sortColors(int[] arr) {
         int low = 0, mid = 0, high = arr.length - 1;
 
