@@ -1,4 +1,7 @@
-class Solution {
+import java.util.List;
+import java.util.ArrayList;
+
+class Pascals_2 {
     public List<Integer> getRow(int rowIndex) {
         List<Integer> lst = new ArrayList<>();
         int first = 1;

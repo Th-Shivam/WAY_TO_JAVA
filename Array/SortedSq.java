@@ -1,4 +1,5 @@
-public int[] sortedSquares(int[] nums) {
+class SortedSq {
+    public int[] sortedSquares(int[] nums) {
     int n = nums.length;
     int[] result = new int[n];
     
@@ -22,4 +23,5 @@ public int[] sortedSquares(int[] nums) {
     }
     
     return result;
+}
 }

@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
+
 class Solution {
   public int Subarraydivp(int[] nums, int p) {
     final long sum = Arrays.stream(nums).asLongStream().sum();

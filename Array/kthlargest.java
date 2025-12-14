@@ -1,6 +1,6 @@
 import java.util.PriorityQueue;
 
-class Solution {
+class kthlargest {
     public int findKthLargest(int[] nums, int k) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         

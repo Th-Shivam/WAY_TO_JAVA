@@ -1,4 +1,5 @@
-class Solution {
+import java.util.Arrays;
+class Arrayproductexceptself {
     public int[] productExceptSelf(int[] nums) {
         int mul=1;
         int zeroindex=-1;
