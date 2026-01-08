@@ -1,4 +1,4 @@
-class Solution {
+class Majorityele {
     public List<Integer> majorityElement(int[] nums) {
         // Create a frequency map to store the count of each element
         Map<Integer, Integer> elementCountMap = new HashMap<>();
